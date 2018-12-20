@@ -37,7 +37,7 @@ public class HolidayController {
 
 
     @RequestMapping(value="/add", method=RequestMethod.POST)
-    public void addBook(@RequestBody HolidayDto holidayDto){
+    public void addHoliday(@RequestBody HolidayDto holidayDto){
         System.out.println("Adding new holiday to repository..."+holidayDto.getName());
         holidayService.addHolidayToRepository(holidayDto);
     }

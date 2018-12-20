@@ -1,12 +1,10 @@
 package lt.sventes.Services;
-
 import lt.sventes.dto.HolidayDto;
 import lt.sventes.entities.Holiday;
 import lt.sventes.repository.HolidayRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -16,6 +14,18 @@ public class HolidayService {
 
 @Autowired
     HolidayRepository holidayRepository;
+
+    public HolidayService(HolidayRepository holidayRepository) {
+        this.holidayRepository = holidayRepository;
+    }
+
+    public HolidayRepository getHolidayRepository() {
+        return holidayRepository;
+    }
+
+    public void setHolidayRepository(HolidayRepository holidayRepository) {
+        this.holidayRepository = holidayRepository;
+    }
 
     @Transactional
     public Collection<HolidayDto> findAll() {

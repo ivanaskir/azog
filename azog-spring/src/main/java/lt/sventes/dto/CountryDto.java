@@ -1,49 +1,39 @@
 package lt.sventes.dto;
 
 public class CountryDto {
-    private String title;
-    private String author;
-    private int pageCount;
-    private String bookLogo;
+    private String name;
+    private String flagImg;
+    private String president;
 
     public CountryDto(){}
 
-    public CountryDto(String title, String author, int pageCount, String bookLogo) {
-        this.title = title;
-        this.author = author;
-        this.pageCount = pageCount;
-        this.bookLogo = bookLogo;
+    public CountryDto(String name, String flagImg, String president) {
+        this.name = name;
+        this.flagImg = flagImg;
+        this.president = president;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getFlagImg() {
+        return flagImg;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setFlagImg(String flagImg) {
+        this.flagImg = flagImg;
     }
 
-    public int getPageCount() {
-        return pageCount;
+    public String getPresident() {
+        return president;
     }
 
-    public void setPageCount(int pageCount) {
-        this.pageCount = pageCount;
-    }
-
-    public String getBookLogo() {
-        return bookLogo;
-    }
-
-    public void setBookLogo(String bookLogo) {
-        this.bookLogo = bookLogo;
+    public void setPresident(String president) {
+        this.president = president;
     }
 }
